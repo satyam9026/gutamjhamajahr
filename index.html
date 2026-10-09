@@ -19,9 +19,9 @@ src="https://www.facebook.com/tr?id=2446511805874865&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>Gokul  | Market Learning Community</title>
+<title>Gokul | Market Learning Community</title>
 
 <meta name="description"
 content="Gokul Chhabra - Market Learning Community. Educational market insights, NIFTY, BANK NIFTY, stocks, charts and trading knowledge.">
@@ -41,6 +41,7 @@ content="Gokul Chhabra - Market Learning Community. Educational market insights,
     margin:0;
     padding:0;
     box-sizing:border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 :root{
@@ -63,6 +64,7 @@ body{
     background:#03060b;
     color:var(--text);
     overflow-x:hidden;
+    width: 100%;
 }
 
 
@@ -73,42 +75,28 @@ body{
 body:before{
     content:"";
     position:fixed;
-
-    width:600px;
-    height:600px;
-
-    left:-250px;
-    top:-220px;
-
-    background:rgba(0,132,255,.16);
-
-    filter:blur(120px);
-
+    width:500px;
+    height:500px;
+    left:-200px;
+    top:-180px;
+    background:rgba(0,132,255,.14);
+    filter:blur(100px);
     border-radius:50%;
-
     pointer-events:none;
-
     z-index:-5;
 }
 
 body:after{
     content:"";
     position:fixed;
-
-    width:500px;
-    height:500px;
-
-    right:-250px;
-    bottom:-200px;
-
-    background:rgba(0,231,255,.10);
-
-    filter:blur(120px);
-
+    width:400px;
+    height:400px;
+    right:-200px;
+    bottom:-150px;
+    background:rgba(0,231,255,.08);
+    filter:blur(100px);
     border-radius:50%;
-
     pointer-events:none;
-
     z-index:-5;
 }
 
@@ -119,28 +107,21 @@ body:after{
 
 .grid-bg{
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     z-index:-4;
-
-    opacity:.22;
-
+    opacity:.18;
     background-image:
         linear-gradient(
-            rgba(255,255,255,.035) 1px,
+            rgba(255,255,255,.03) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(255,255,255,.035) 1px,
+            rgba(255,255,255,.03) 1px,
             transparent 1px
         );
-
-    background-size:50px 50px;
-
+    background-size:40px 40px;
     mask-image:linear-gradient(
         to bottom,
         black,
@@ -155,75 +136,34 @@ body:after{
 
 .market-lines{
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     overflow:hidden;
-
     z-index:-3;
 }
 
 .line{
     position:absolute;
-
     width:1px;
-    height:160px;
-
+    height:140px;
     background:
         linear-gradient(
             transparent,
-            rgba(0,212,255,.35),
+            rgba(0,212,255,.3),
             transparent
         );
-
     animation:fall linear infinite;
 }
 
-.line:nth-child(1){
-    left:8%;
-    animation-duration:8s;
-}
-
-.line:nth-child(2){
-    left:21%;
-    animation-duration:11s;
-    animation-delay:2s;
-}
-
-.line:nth-child(3){
-    left:39%;
-    animation-duration:9s;
-    animation-delay:1s;
-}
-
-.line:nth-child(4){
-    left:58%;
-    animation-duration:13s;
-}
-
-.line:nth-child(5){
-    left:76%;
-    animation-duration:10s;
-    animation-delay:3s;
-}
-
-.line:nth-child(6){
-    left:92%;
-    animation-duration:12s;
-}
+.line:nth-child(1){ left:10%; animation-duration:8s; }
+.line:nth-child(2){ left:30%; animation-duration:11s; animation-delay:2s; }
+.line:nth-child(3){ left:50%; animation-duration:9s; animation-delay:1s; }
+.line:nth-child(4){ left:70%; animation-duration:13s; }
+.line:nth-child(5){ left:90%; animation-duration:10s; animation-delay:3s; }
 
 @keyframes fall{
-
-    from{
-        transform:translateY(-200px);
-    }
-
-    to{
-        transform:translateY(110vh);
-    }
-
+    from{ transform:translateY(-200px); }
+    to{ transform:translateY(110vh); }
 }
 
 
@@ -232,7 +172,7 @@ body:after{
 ========================================================= */
 
 .container{
-    width:min(1120px,92%);
+    width:min(1120px, 90%);
     margin:auto;
 }
 
@@ -242,56 +182,38 @@ body:after{
 ========================================================= */
 
 .navbar{
-    height:76px;
-
+    height:70px;
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     position:relative;
-
     z-index:10;
 }
 
 .brand{
     display:flex;
-
     align-items:center;
-
-    gap:10px;
-
-    font-size:15px;
-
+    gap:9px;
+    font-size:14px;
     font-weight:900;
-
     letter-spacing:-.3px;
 }
 
 .brand-logo{
-
-    width:35px;
-    height:35px;
-
-    border-radius:11px;
-
+    width:34px;
+    height:34px;
+    border-radius:10px;
     display:flex;
-
     align-items:center;
     justify-content:center;
-
     background:
         linear-gradient(
             135deg,
             #00d9ff,
             #1675ff
         );
-
     color:#fff;
-
-    box-shadow:
-        0 0 25px rgba(0,150,255,.35);
+    box-shadow:0 0 20px rgba(0,150,255,.3);
 }
 
 .brand span{
@@ -299,32 +221,21 @@ body:after{
 }
 
 .nav-btn{
-
     text-decoration:none;
-
     color:#fff;
-
-    font-size:11px;
-
+    font-size:10px;
     font-weight:800;
-
-    padding:10px 15px;
-
+    padding:9px 14px;
     border:1px solid rgba(255,255,255,.13);
-
     background:rgba(255,255,255,.05);
-
     border-radius:30px;
-
     transition:.25s;
+    white-space:nowrap;
 }
 
 .nav-btn:hover{
-
     background:rgba(255,255,255,.10);
-
     transform:translateY(-2px);
-
 }
 
 
@@ -333,162 +244,85 @@ body:after{
 ========================================================= */
 
 .hero{
-
-    min-height:720px;
-
+    min-height: calc(100vh - 70px);
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     text-align:center;
-
-    padding:70px 0 90px;
-
+    padding:40px 0 60px;
     position:relative;
 }
 
-
-/* =========================================================
-   HERO GLOW
-========================================================= */
-
 .hero-glow{
-
     position:absolute;
-
-    width:500px;
-    height:500px;
-
+    width:350px;
+    height:350px;
     border-radius:50%;
-
     background:
         radial-gradient(
             circle,
-            rgba(0,157,255,.20),
+            rgba(0,157,255,.18),
             transparent 68%
         );
-
-    filter:blur(10px);
-
+    filter:blur(20px);
     z-index:-1;
-
     animation:pulseGlow 5s ease-in-out infinite;
 }
 
 @keyframes pulseGlow{
-
-    0%,100%{
-        transform:scale(.9);
-        opacity:.6;
-    }
-
-    50%{
-        transform:scale(1.12);
-        opacity:1;
-    }
-
+    0%,100%{ transform:scale(.9); opacity:.6; }
+    50%{ transform:scale(1.1); opacity:1; }
 }
 
-
-/* =========================================================
-   CENTER LOGO
-   CHANGE ONLY THE IMAGE URL BELOW
-========================================================= */
-
 .hero-logo-wrap{
-
     position:relative;
-
-    width:140px;
-    height:140px;
-
-    margin:0 auto 30px;
-
+    width:120px;
+    height:120px;
+    margin:0 auto 24px;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     animation:logoFloat 4s ease-in-out infinite;
 }
 
 .hero-logo{
-
-    width:112px;
-    height:112px;
-
+    width:100px;
+    height:100px;
     object-fit:cover;
-
     border-radius:50%;
-
     border:3px solid rgba(255,255,255,.18);
-
     background:#07111d;
-
     position:relative;
-
     z-index:2;
-
     box-shadow:
-
-        0 0 0 6px rgba(0,200,255,.04),
-
-        0 0 35px rgba(0,160,255,.40),
-
-        0 15px 50px rgba(0,0,0,.50);
+        0 0 0 5px rgba(0,200,255,.04),
+        0 0 30px rgba(0,160,255,.35),
+        0 10px 40px rgba(0,0,0,.5);
 }
 
-
-/* LOGO GLOW */
-
 .hero-logo-glow{
-
     position:absolute;
-
-    width:125px;
-    height:125px;
-
+    width:110px;
+    height:110px;
     border-radius:50%;
-
     background:
         radial-gradient(
             circle,
-            rgba(0,210,255,.40),
+            rgba(0,210,255,.4),
             transparent 70%
         );
-
-    filter:blur(15px);
-
+    filter:blur(12px);
     animation:logoPulse 2.5s ease-in-out infinite;
 }
 
 @keyframes logoFloat{
-
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-8px);
-    }
-
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-6px); }
 }
 
 @keyframes logoPulse{
-
-    0%,100%{
-        transform:scale(.90);
-        opacity:.55;
-    }
-
-    50%{
-        transform:scale(1.15);
-        opacity:1;
-    }
-
+    0%,100%{ transform:scale(.9); opacity:.5; }
+    50%{ transform:scale(1.12); opacity:1; }
 }
 
 
@@ -497,56 +331,31 @@ body:after{
 ========================================================= */
 
 .live-badge{
-
     display:inline-flex;
-
     align-items:center;
-
-    gap:8px;
-
-    padding:8px 14px;
-
+    gap:7px;
+    padding:7px 12px;
     border-radius:30px;
-
     background:rgba(0,217,255,.07);
-
     border:1px solid rgba(0,217,255,.20);
-
     color:#6fe8ff;
-
-    font-size:10px;
-
+    font-size:9px;
     font-weight:800;
-
-    letter-spacing:1px;
-
+    letter-spacing:.8px;
     animation:fadeDown .8s ease both;
 }
 
 .live-dot{
-
-    width:7px;
-    height:7px;
-
+    width:6px;
+    height:6px;
     border-radius:50%;
-
     background:#22e59a;
-
-    box-shadow:
-
-        0 0 0 5px rgba(34,229,154,.10),
-
-        0 0 14px #22e59a;
-
+    box-shadow:0 0 0 4px rgba(34,229,154,.1), 0 0 10px #22e59a;
     animation:blink 1.6s infinite;
 }
 
 @keyframes blink{
-
-    50%{
-        opacity:.35;
-    }
-
+    50%{ opacity:.35; }
 }
 
 
@@ -555,24 +364,16 @@ body:after{
 ========================================================= */
 
 .hero h1{
-
-    margin:27px auto 0;
-
-    max-width:900px;
-
-    font-size:clamp(42px,7vw,82px);
-
-    line-height:.98;
-
-    letter-spacing:-4px;
-
+    margin:20px auto 0;
+    max-width:850px;
+    font-size:clamp(32px, 7vw, 68px);
+    line-height:1.05;
+    letter-spacing:-2.5px;
     font-weight:900;
-
     animation:fadeUp .9s ease both;
 }
 
 .hero h1 .gradient{
-
     background:
         linear-gradient(
             100deg,
@@ -581,24 +382,15 @@ body:after{
             #1688ff 70%,
             #fff 100%
         );
-
     background-size:250% auto;
-
     -webkit-background-clip:text;
-
     background-clip:text;
-
     color:transparent;
-
     animation:textGradient 5s linear infinite;
 }
 
 @keyframes textGradient{
-
-    to{
-        background-position:250% center;
-    }
-
+    to{ background-position:250% center; }
 }
 
 
@@ -607,17 +399,11 @@ body:after{
 ========================================================= */
 
 .hero-description{
-
-    max-width:610px;
-
-    margin:24px auto 0;
-
+    max-width:560px;
+    margin:18px auto 0;
     color:#8792a5;
-
-    font-size:15px;
-
-    line-height:1.8;
-
+    font-size:clamp(13px, 2vw, 15px);
+    line-height:1.7;
     animation:fadeUp 1s .15s ease both;
 }
 
@@ -627,127 +413,80 @@ body:after{
 ========================================================= */
 
 .hero-buttons{
-
-    margin-top:32px;
-
+    margin-top:26px;
     display:flex;
-
     justify-content:center;
-
     gap:12px;
-
+    flex-wrap: wrap;
     animation:fadeUp 1s .3s ease both;
 }
 
 .primary-btn{
-
     position:relative;
-
-    min-width:190px;
-
-    padding:17px 25px;
-
-    border-radius:16px;
-
+    width: 100%;
+    max-width: 220px;
+    padding:15px 22px;
+    border-radius:14px;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    gap:9px;
-
+    gap:8px;
     text-decoration:none;
-
     color:#fff;
-
-    font-size:13px;
-
+    font-size:12px;
     font-weight:800;
-
     overflow:hidden;
-
     background:
         linear-gradient(
             135deg,
             #00cfff,
             #1676ff
         );
-
-    box-shadow:
-        0 15px 50px rgba(0,126,255,.28);
-
+    box-shadow:0 10px 30px rgba(0,126,255,.25);
     transition:.25s;
 }
 
 .primary-btn:before{
-
     content:"";
-
     position:absolute;
-
-    width:70px;
-
-    height:180px;
-
+    width:60px;
+    height:150px;
     background:rgba(255,255,255,.25);
-
     transform:rotate(25deg);
-
-    left:-110px;
-
-    top:-40px;
-
+    left:-100px;
+    top:-30px;
     animation:buttonShine 3s infinite;
 }
 
 @keyframes buttonShine{
-
-    0%,45%{
-        left:-110px;
-    }
-
-    70%,100%{
-        left:130%;
-    }
-
+    0%,45%{ left:-100px; }
+    70%,100%{ left:130%; }
 }
 
 .primary-btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:
-        0 20px 60px rgba(0,126,255,.42);
+    transform:translateY(-3px);
+    box-shadow:0 15px 40px rgba(0,126,255,.38);
 }
 
 .secondary-btn{
-
-    min-width:150px;
-
-    padding:17px 22px;
-
-    border-radius:16px;
-
+    width: 100%;
+    max-width: 180px;
+    padding:15px 20px;
+    border-radius:14px;
     text-decoration:none;
-
     color:#cbd5e1;
-
-    font-size:13px;
-
+    font-size:12px;
     font-weight:700;
-
     background:rgba(255,255,255,.045);
-
     border:1px solid rgba(255,255,255,.10);
-
     transition:.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .secondary-btn:hover{
-
     background:rgba(255,255,255,.08);
-
 }
 
 
@@ -756,64 +495,36 @@ body:after{
 ========================================================= */
 
 .ticker-wrap{
-
     border-top:1px solid rgba(255,255,255,.06);
-
     border-bottom:1px solid rgba(255,255,255,.06);
-
     background:rgba(255,255,255,.025);
-
     overflow:hidden;
-
     white-space:nowrap;
 }
 
 .ticker{
-
     display:inline-flex;
-
-    gap:45px;
-
-    padding:14px 0;
-
-    animation:ticker 24s linear infinite;
+    gap:35px;
+    padding:12px 0;
+    animation:ticker 22s linear infinite;
 }
 
 .ticker-item{
-
     display:flex;
-
-    gap:8px;
-
+    gap:6px;
     align-items:center;
-
     color:#8792a5;
-
-    font-size:10px;
-
+    font-size:9px;
     font-weight:700;
-
-    letter-spacing:.8px;
+    letter-spacing:.6px;
 }
 
-.up{
-    color:#25dfa0;
-}
-
-.down{
-    color:#ff7185;
-}
+.up{ color:#25dfa0; }
+.down{ color:#ff7185; }
 
 @keyframes ticker{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-50%);
-    }
-
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
 }
 
 
@@ -822,52 +533,36 @@ body:after{
 ========================================================= */
 
 .section{
-
-    padding:110px 0;
+    padding:80px 0;
 }
 
 .section-heading{
-
     text-align:center;
-
-    max-width:650px;
-
-    margin:0 auto 55px;
+    max-width:600px;
+    margin:0 auto 40px;
+    padding: 0 15px;
 }
 
 .eyebrow{
-
     color:#21cfff;
-
-    font-size:10px;
-
+    font-size:9px;
     font-weight:900;
-
-    letter-spacing:2px;
-
+    letter-spacing:1.8px;
     text-transform:uppercase;
-
-    margin-bottom:13px;
+    margin-bottom:10px;
 }
 
 .section-heading h2{
-
-    font-size:clamp(30px,5vw,48px);
-
-    letter-spacing:-2px;
-
-    line-height:1.08;
+    font-size:clamp(26px, 4.5vw, 42px);
+    letter-spacing:-1.5px;
+    line-height:1.1;
 }
 
 .section-heading p{
-
-    margin-top:15px;
-
+    margin-top:12px;
     color:#7f8b9e;
-
-    font-size:13px;
-
-    line-height:1.7;
+    font-size:12px;
+    line-height:1.6;
 }
 
 
@@ -876,122 +571,71 @@ body:after{
 ========================================================= */
 
 .bento{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(12,1fr);
-
-    gap:15px;
+    grid-template-columns:repeat(12, 1fr);
+    gap:14px;
 }
 
 .bento-card{
-
-    min-height:220px;
-
-    padding:27px;
-
-    border-radius:25px;
-
+    min-height:200px;
+    padding:22px;
+    border-radius:20px;
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,.065),
-            rgba(255,255,255,.025)
+            rgba(255,255,255,.06),
+            rgba(255,255,255,.02)
         );
-
-    border:1px solid rgba(255,255,255,.09);
-
+    border:1px solid rgba(255,255,255,.08);
     position:relative;
-
     overflow:hidden;
-
-    transition:
-        transform .35s,
-        border-color .35s;
+    transition:transform .3s, border-color .3s;
 }
 
 .bento-card:before{
-
     content:"";
-
     position:absolute;
-
-    width:180px;
-
-    height:180px;
-
+    width:140px;
+    height:140px;
     border-radius:50%;
-
-    background:rgba(0,170,255,.09);
-
-    filter:blur(50px);
-
-    right:-70px;
-
-    top:-70px;
+    background:rgba(0,170,255,.07);
+    filter:blur(40px);
+    right:-50px;
+    top:-50px;
 }
 
 .bento-card:hover{
-
-    transform:translateY(-7px);
-
-    border-color:
-        rgba(0,205,255,.28);
+    transform:translateY(-4px);
+    border-color:rgba(0,205,255,.25);
 }
 
-.card-large{
-    grid-column:span 7;
-}
-
-.card-small{
-    grid-column:span 5;
-}
-
-.card-full{
-    grid-column:span 12;
-}
+.card-large{ grid-column:span 7; }
+.card-small{ grid-column:span 5; }
+.card-full{ grid-column:span 12; }
 
 .card-icon{
-
-    width:48px;
-    height:48px;
-
-    border-radius:15px;
-
+    width:42px;
+    height:42px;
+    border-radius:12px;
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
-    font-size:20px;
-
-    background:rgba(0,180,255,.09);
-
+    font-size:18px;
+    background:rgba(0,180,255,.08);
     border:1px solid rgba(0,180,255,.12);
-
-    margin-bottom:35px;
+    margin-bottom:24px;
 }
 
 .bento-card h3{
-
-    font-size:20px;
-
-    letter-spacing:-.5px;
-
-    margin-bottom:9px;
+    font-size:18px;
+    letter-spacing:-.4px;
+    margin-bottom:8px;
 }
 
 .bento-card p{
-
-    max-width:500px;
-
     color:#7d899c;
-
     font-size:12px;
-
-    line-height:1.75;
+    line-height:1.6;
 }
 
 
@@ -1000,67 +644,44 @@ body:after{
 ========================================================= */
 
 .chart-card{
-
-    height:170px;
-
-    margin-top:20px;
-
+    height:140px;
+    margin-top:16px;
     position:relative;
-
     overflow:hidden;
-
-    border-radius:16px;
-
+    border-radius:14px;
     background:
         repeating-linear-gradient(
             0deg,
-            rgba(255,255,255,.035) 0,
-            rgba(255,255,255,.035) 1px,
+            rgba(255,255,255,.03) 0,
+            rgba(255,255,255,.03) 1px,
             transparent 1px,
-            transparent 35px
+            transparent 30px
         );
 }
 
 .chart-line{
-
     position:absolute;
-
     width:100%;
-
     height:100%;
 }
 
 .chart-line svg{
-
     width:100%;
-
     height:100%;
 }
 
 .chart-path{
-
     fill:none;
-
     stroke:#18d5ff;
-
-    stroke-width:3;
-
+    stroke-width:2.5;
     stroke-linecap:round;
-
     stroke-dasharray:1000;
-
     stroke-dashoffset:1000;
-
-    animation:
-        drawChart 4s ease forwards infinite alternate;
+    animation:drawChart 4s ease forwards infinite alternate;
 }
 
 @keyframes drawChart{
-
-    to{
-        stroke-dashoffset:0;
-    }
-
+    to{ stroke-dashoffset:0; }
 }
 
 
@@ -1069,60 +690,41 @@ body:after{
 ========================================================= */
 
 .topic-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns:repeat(4, 1fr);
     gap:12px;
 }
 
 .topic{
-
-    padding:20px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.035);
-
-    border:1px solid rgba(255,255,255,.075);
-
+    padding:18px 14px;
+    border-radius:16px;
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.07);
     text-align:center;
-
     transition:.3s;
 }
 
 .topic:hover{
-
-    background:rgba(0,150,255,.07);
-
-    transform:translateY(-4px);
+    background:rgba(0,150,255,.06);
+    transform:translateY(-3px);
 }
 
 .topic-icon{
-
-    font-size:23px;
-
-    margin-bottom:9px;
+    font-size:20px;
+    margin-bottom:8px;
 }
 
 .topic strong{
-
     display:block;
-
-    font-size:12px;
+    font-size:11px;
 }
 
 .topic span{
-
     display:block;
-
-    margin-top:5px;
-
+    margin-top:4px;
     color:#687589;
-
-    font-size:9px;
+    font-size:8px;
+    letter-spacing: .5px;
 }
 
 
@@ -1131,84 +733,58 @@ body:after{
 ========================================================= */
 
 .cta-section{
-
-    padding:80px 0 120px;
+    padding:40px 0 90px;
 }
 
 .cta-box{
-
     position:relative;
-
     overflow:hidden;
-
     text-align:center;
-
-    padding:80px 30px;
-
-    border-radius:32px;
-
+    padding:60px 20px;
+    border-radius:26px;
     background:
         radial-gradient(
             circle at center,
-            rgba(0,154,255,.18),
+            rgba(0,154,255,.15),
             transparent 60%
         ),
-        rgba(255,255,255,.035);
-
-    border:1px solid rgba(0,190,255,.14);
+        rgba(255,255,255,.03);
+    border:1px solid rgba(0,190,255,.12);
 }
 
 .cta-box:before{
-
     content:"";
-
     position:absolute;
-
     inset:-100px;
-
     background:
         conic-gradient(
             transparent,
-            rgba(0,190,255,.16),
+            rgba(0,190,255,.12),
             transparent 25%
         );
-
     animation:rotateGlow 8s linear infinite;
 }
 
 @keyframes rotateGlow{
-
-    to{
-        transform:rotate(360deg);
-    }
-
+    to{ transform:rotate(360deg); }
 }
 
 .cta-content{
-
     position:relative;
-
     z-index:2;
 }
 
 .cta-box h2{
-
-    font-size:clamp(32px,6vw,55px);
-
-    letter-spacing:-2px;
+    font-size:clamp(28px, 5.5vw, 46px);
+    letter-spacing:-1.5px;
 }
 
 .cta-box p{
-
-    max-width:550px;
-
-    margin:15px auto 27px;
-
+    max-width:500px;
+    margin:12px auto 24px;
     color:#7f8b9e;
-
-    font-size:13px;
-
-    line-height:1.7;
+    font-size:12px;
+    line-height:1.6;
 }
 
 
@@ -1217,20 +793,13 @@ body:after{
 ========================================================= */
 
 .disclaimer{
-
-    max-width:850px;
-
+    max-width:800px;
     margin:0 auto;
-
-    padding:20px;
-
+    padding:15px;
     text-align:center;
-
     color:#596578;
-
     font-size:9px;
-
-    line-height:1.8;
+    line-height:1.7;
 }
 
 
@@ -1239,15 +808,10 @@ body:after{
 ========================================================= */
 
 footer{
-
     border-top:1px solid rgba(255,255,255,.06);
-
-    padding:28px 0;
-
+    padding:24px 0;
     text-align:center;
-
     color:#536073;
-
     font-size:9px;
 }
 
@@ -1261,82 +825,45 @@ footer strong{
 ========================================================= */
 
 .float-telegram{
-
     position:fixed;
-
-    right:20px;
-
-    bottom:20px;
-
-    width:58px;
-
-    height:58px;
-
+    right:16px;
+    bottom:16px;
+    width:52px;
+    height:52px;
     border-radius:50%;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     text-decoration:none;
-
     color:white;
-
-    font-size:22px;
-
+    font-size:20px;
     background:
         linear-gradient(
             135deg,
             #19cfff,
             #0878ff
         );
-
-    box-shadow:
-        0 12px 40px rgba(0,130,255,.4);
-
+    box-shadow:0 10px 30px rgba(0,130,255,.35);
     z-index:100;
-
-    animation:
-        floatButton 2.5s ease-in-out infinite;
+    animation:floatButton 2.5s ease-in-out infinite;
 }
 
 .float-telegram:after{
-
     content:"";
-
     position:absolute;
-
-    inset:-7px;
-
+    inset:-6px;
     border:1px solid rgba(0,190,255,.25);
-
     border-radius:50%;
-
     animation:ring 2s infinite;
 }
 
 @keyframes ring{
-
-    0%{
-        transform:scale(.8);
-        opacity:1;
-    }
-
-    100%{
-        transform:scale(1.5);
-        opacity:0;
-    }
-
+    0%{ transform:scale(.8); opacity:1; }
+    100%{ transform:scale(1.4); opacity:0; }
 }
 
 @keyframes floatButton{
-
-    50%{
-        transform:translateY(-7px);
-    }
-
+    50%{ transform:translateY(-5px); }
 }
 
 
@@ -1345,232 +872,113 @@ footer strong{
 ========================================================= */
 
 .reveal{
-
     opacity:0;
-
-    transform:translateY(35px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
+    transform:translateY(25px);
+    transition:opacity .7s ease, transform .7s ease;
 }
 
 .reveal.active{
-
     opacity:1;
-
     transform:translateY(0);
 }
 
 
 /* =========================================================
-   ANIMATIONS
+   RESPONSIVE MEDIA QUERIES
 ========================================================= */
 
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(25px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-@keyframes fadeDown{
-
-    from{
-        opacity:0;
-        transform:translateY(-15px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:800px){
-
-    .hero{
-
-        min-height:650px;
-
-        padding-top:45px;
-    }
-
-    .hero h1{
-
-        letter-spacing:-2.5px;
-    }
-
-    .bento{
-
-        grid-template-columns:1fr;
-    }
-
+@media(max-width:992px){
     .card-large,
-    .card-small,
-    .card-full{
-
-        grid-column:span 1;
+    .card-small{
+        grid-column:span 12;
     }
-
     .topic-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2, 1fr);
     }
-
 }
 
-
-@media(max-width:550px){
-
+@media(max-width:576px){
     .container{
-
-        width:90%;
+        width:92%;
     }
-
     .navbar{
-
-        height:68px;
+        height:64px;
     }
-
     .brand{
-
-        font-size:12px;
+        font-size:13px;
     }
-
     .brand-logo{
-
-        width:31px;
-        height:31px;
+        width:30px;
+        height:30px;
+        border-radius:8px;
     }
-
     .hero{
-
-        padding:60px 0 75px;
+        min-height: auto;
+        padding: 30px 0 50px;
     }
-
-
-    /* MOBILE LOGO */
-
     .hero-logo-wrap{
-
-        width:105px;
-
-        height:105px;
-
-        margin-bottom:23px;
+        width:100px;
+        height:100px;
+        margin-bottom:20px;
     }
-
     .hero-logo{
-
+        width:86px;
+        height:86px;
+    }
+    .hero-logo-glow{
         width:90px;
-
         height:90px;
     }
-
-    .hero-logo-glow{
-
-        width:100px;
-
-        height:100px;
-    }
-
-
     .hero h1{
-
-        font-size:43px;
+        font-size:clamp(30px, 8vw, 40px);
+        letter-spacing:-1.5px;
     }
-
     .hero-description{
-
         font-size:12px;
-
-        line-height:1.7;
     }
-
     .hero-buttons{
-
         flex-direction:column;
-
-        align-items:stretch;
+        align-items:center;
+        width: 100%;
     }
-
     .primary-btn,
     .secondary-btn{
-
-        width:100%;
+        max-width: 100%;
+        width: 100%;
     }
-
     .section{
-
-        padding:80px 0;
+        padding:55px 0;
     }
-
     .bento-card{
-
-        min-height:200px;
-
-        padding:22px;
+        padding:18px;
     }
-
     .topic-grid{
-
-        gap:9px;
+        grid-template-columns:repeat(2, 1fr);
+        gap:10px;
     }
-
     .topic{
-
-        padding:17px 8px;
+        padding:15px 10px;
     }
-
+    .cta-section{
+        padding:20px 0 70px;
+    }
     .cta-box{
-
-        padding:60px 20px;
+        padding:45px 16px;
     }
-
     .float-telegram{
-
-        width:53px;
-
-        height:53px;
-
-        right:15px;
-
-        bottom:15px;
+        width:48px;
+        height:48px;
+        font-size:18px;
+        right:14px;
+        bottom:14px;
     }
-
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media(prefers-reduced-motion:reduce){
-
-    *,
-    *:before,
-    *:after{
-
+    *, *:before, *:after{
         animation:none !important;
-
         transition:none !important;
     }
-
 }
 
 </style>
@@ -1580,887 +988,244 @@ footer strong{
 
 <body>
 
-
-<!-- =========================================================
-     BACKGROUND
-========================================================= -->
-
 <div class="grid-bg"></div>
 
 <div class="market-lines">
-
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
-    <div class="line"></div>
-
 </div>
 
-
-<!-- =========================================================
-     NAVBAR
-========================================================= -->
-
 <div class="container">
-
 <nav class="navbar">
-
     <div class="brand">
-
-        <div class="brand-logo">
-            GC
-        </div>
-
+        <div class="brand-logo">GC</div>
         GOKUL <span>Expert</span>
-
     </div>
-
-
-    <a
-        href="https://t.me/+viqEdDd3Fa0yMWY1"
-        target="_blank"
-        class="nav-btn"
-    >
+    <a href="https://t.me/+viqEdDd3Fa0yMWY1" target="_blank" class="nav-btn">
         JOIN COMMUNITY →
     </a>
-
 </nav>
-
 </div>
-
-
-<!-- =========================================================
-     HERO
-========================================================= -->
 
 <section class="hero">
-
     <div class="hero-glow"></div>
-
     <div class="container">
-
-
-        <!-- =================================================
-             CENTER LOGO
-             
-             CHANGE THIS IMAGE URL
-        ================================================== -->
-
         <div class="hero-logo-wrap">
-
             <div class="hero-logo-glow"></div>
-
-            <img
-                src="gkul.jpg"
-                alt="Gokul Chhabra Logo"
-                class="hero-logo"
-            >
-
+            <img src="gkul.jpg" alt="Gokul Chhabra Logo" class="hero-logo">
         </div>
-
-
-        <!-- LIVE BADGE -->
 
         <div class="live-badge">
-
             <span class="live-dot"></span>
-
             MARKET LEARNING COMMUNITY
-
         </div>
-
-
-        <!-- HERO TITLE -->
 
         <h1>
-
             Learn The Market.<br>
-
-            <span class="gradient">
-                Think Beyond The Chart.
-            </span>
-
+            <span class="gradient">Think Beyond The Chart.</span>
         </h1>
 
-
-        <!-- DESCRIPTION -->
-
         <p class="hero-description">
-
-            Welcome to the Gokul Expert community —
-            a modern space for market education, chart
-            understanding, NIFTY & BANK NIFTY insights,
-            trading concepts and responsible learning.
-
+            Welcome to the Gokul Expert community — a modern space for market education, chart understanding, NIFTY & BANK NIFTY insights, trading concepts and responsible learning.
         </p>
-
-
-        <!-- BUTTONS -->
 
         <div class="hero-buttons">
-
-            <a
-                href="https://t.me/+Fbph80QVeb5lZDA1"
-                target="_blank"
-                class="primary-btn"
-            >
-
-                <span>✈</span>
-
-                JOIN TELEGRAM
-
+            <a href="https://t.me/+Fbph80QVeb5lZDA1" target="_blank" class="primary-btn">
+                <span>✈</span> JOIN TELEGRAM
             </a>
-
-
-            <a
-                href="#learn"
-                class="secondary-btn"
-            >
-
+            <a href="#learn" class="secondary-btn">
                 EXPLORE →
-
             </a>
-
         </div>
-
     </div>
-
 </section>
-
-
-<!-- =========================================================
-     TICKER
-========================================================= -->
 
 <div class="ticker-wrap">
-
 <div class="ticker">
-
-    <div class="ticker-item">
-
-        NIFTY
-
-        <span class="up">
-            ▲ MARKET WATCH
-        </span>
-
-    </div>
-
-
-    <div class="ticker-item">
-
-        BANK NIFTY
-
-        <span class="up">
-            ▲ MARKET CONTEXT
-        </span>
-
-    </div>
-
-
-    <div class="ticker-item">
-
-        STOCKS
-
-        <span class="up">
-            ● EDUCATION
-        </span>
-
-    </div>
-
-
-    <div class="ticker-item">
-
-        PRICE ACTION
-
-        <span class="up">
-            ● LEARNING
-        </span>
-
-    </div>
-
-
-    <div class="ticker-item">
-
-        RISK MANAGEMENT
-
-        <span class="up">
-            ● AWARENESS
-        </span>
-
-    </div>
-
-
-    <!-- DUPLICATE -->
-
-    <div class="ticker-item">
-
-        NIFTY
-
-        <span class="up">
-            ▲ MARKET WATCH
-        </span>
-
-    </div>
-
-
-    <div class="ticker-item">
-
-        BANK NIFTY
-
-        <span class="up">
-            ▲ MARKET CONTEXT
-        </span>
-
-    </div>
-
-
-    <div class="ticker-item">
-
-        STOCKS
-
-        <span class="up">
-            ● EDUCATION
-        </span>
-
-    </div>
-
-
-    <div class="ticker-item">
-
-        PRICE ACTION
-
-        <span class="up">
-            ● LEARNING
-        </span>
-
-    </div>
-
-
+    <div class="ticker-item">NIFTY <span class="up">▲ MARKET WATCH</span></div>
+    <div class="ticker-item">BANK NIFTY <span class="up">▲ MARKET CONTEXT</span></div>
+    <div class="ticker-item">STOCKS <span class="up">● EDUCATION</span></div>
+    <div class="ticker-item">PRICE ACTION <span class="up">● LEARNING</span></div>
+    <div class="ticker-item">RISK MANAGEMENT <span class="up">● AWARENESS</span></div>
+    <!-- DUPLICATE FOR INFINITE LOOP -->
+    <div class="ticker-item">NIFTY <span class="up">▲ MARKET WATCH</span></div>
+    <div class="ticker-item">BANK NIFTY <span class="up">▲ MARKET CONTEXT</span></div>
+    <div class="ticker-item">STOCKS <span class="up">● EDUCATION</span></div>
+    <div class="ticker-item">PRICE ACTION <span class="up">● LEARNING</span></div>
 </div>
-
 </div>
-
-
-<!-- =========================================================
-     LEARNING SECTION
-========================================================= -->
 
 <section class="section" id="learn">
-
 <div class="container">
-
-
     <div class="section-heading reveal">
-
-        <div class="eyebrow">
-            WHAT'S INSIDE
-        </div>
-
-        <h2>
-            Everything you need to
-            understand the market.
-        </h2>
-
-        <p>
-            A clean educational environment focused on
-            understanding markets instead of chasing noise.
-        </p>
-
+        <div class="eyebrow">WHAT'S INSIDE</div>
+        <h2>Everything you need to understand the market.</h2>
+        <p>A clean educational environment focused on understanding markets instead of chasing noise.</p>
     </div>
-
 
     <div class="bento">
-
-
-        <!-- LARGE CARD -->
-
         <div class="bento-card card-large reveal">
-
-            <div class="card-icon">
-                📈
-            </div>
-
-            <h3>
-                Market Analysis & Charts
-            </h3>
-
-            <p>
-                Explore market structure, price behaviour,
-                chart concepts and technical analysis from
-                an educational perspective.
-            </p>
-
-
+            <div class="card-icon">📈</div>
+            <h3>Market Analysis & Charts</h3>
+            <p>Explore market structure, price behaviour, chart concepts and technical analysis from an educational perspective.</p>
             <div class="chart-card">
-
                 <div class="chart-line">
-
-                    <svg
-                        viewBox="0 0 800 200"
-                        preserveAspectRatio="none"
-                    >
-
-                        <path
-                            class="chart-path"
-                            d="
-                            M0 160
-                            L55 145
-                            L100 150
-                            L145 110
-                            L190 125
-                            L235 90
-                            L280 105
-                            L330 72
-                            L370 85
-                            L420 55
-                            L470 75
-                            L515 40
-                            L560 60
-                            L610 30
-                            L650 48
-                            L700 20
-                            L750 35
-                            L800 10
-                            "
-                        />
-
+                    <svg viewBox="0 0 800 200" preserveAspectRatio="none">
+                        <path class="chart-path" d="M0 160 L55 145 L100 150 L145 110 L190 125 L235 90 L280 105 L330 72 L370 85 L420 55 L470 75 L515 40 L560 60 L610 30 L650 48 L700 20 L750 35 L800 10" />
                     </svg>
-
                 </div>
-
             </div>
-
         </div>
-
-
-        <!-- PSYCHOLOGY -->
 
         <div class="bento-card card-small reveal">
-
-            <div class="card-icon">
-                🧠
-            </div>
-
-            <h3>
-                Trading Psychology
-            </h3>
-
-            <p>
-                Learn why discipline, patience,
-                planning and emotional control
-                matter when studying financial markets.
-            </p>
-
+            <div class="card-icon">🧠</div>
+            <h3>Trading Psychology</h3>
+            <p>Learn why discipline, patience, planning and emotional control matter when studying financial markets.</p>
         </div>
-
-
-        <!-- NIFTY -->
 
         <div class="bento-card card-small reveal">
-
-            <div class="card-icon">
-                🎯
-            </div>
-
-            <h3>
-                NIFTY & BANK NIFTY
-            </h3>
-
-            <p>
-                Educational context around major
-                Indian market indices and their
-                price movements.
-            </p>
-
+            <div class="card-icon">🎯</div>
+            <h3>NIFTY & BANK NIFTY</h3>
+            <p>Educational context around major Indian market indices and their price movements.</p>
         </div>
-
-
-        <!-- RISK -->
 
         <div class="bento-card card-large reveal">
-
-            <div class="card-icon">
-                🛡
-            </div>
-
-            <h3>
-                Risk Awareness
-            </h3>
-
-            <p>
-                Understand the importance of risk
-                management, position planning and
-                responsible decision making.
-            </p>
-
+            <div class="card-icon">🛡</div>
+            <h3>Risk Awareness</h3>
+            <p>Understand the importance of risk management, position planning and responsible decision making.</p>
         </div>
-
-
-        <!-- FULL CARD -->
 
         <div class="bento-card card-full reveal">
-
-            <div class="card-icon">
-                ⚡
-            </div>
-
-            <h3>
-                Learn. Analyze. Grow.
-            </h3>
-
-            <p>
-                No unnecessary complexity. Just a simple,
-                modern place to explore market concepts,
-                trading education and financial awareness.
-            </p>
-
+            <div class="card-icon">⚡</div>
+            <h3>Learn. Analyze. Grow.</h3>
+            <p>No unnecessary complexity. Just a simple, modern place to explore market concepts, trading education and financial awareness.</p>
         </div>
-
-
     </div>
-
 </div>
-
 </section>
-
-
-<!-- =========================================================
-     TOPICS
-========================================================= -->
 
 <section class="section">
-
 <div class="container">
-
-
     <div class="section-heading reveal">
-
-        <div class="eyebrow">
-            LEARNING AREAS
-        </div>
-
-        <h2>
-            Explore the market,
-            one concept at a time.
-        </h2>
-
+        <div class="eyebrow">LEARNING AREAS</div>
+        <h2>Explore the market, one concept at a time.</h2>
     </div>
-
 
     <div class="topic-grid">
-
-
         <div class="topic reveal">
-
-            <div class="topic-icon">
-                📊
-            </div>
-
-            <strong>
-                NIFTY
-            </strong>
-
-            <span>
-                MARKET EDUCATION
-            </span>
-
+            <div class="topic-icon">📊</div>
+            <strong>NIFTY</strong>
+            <span>MARKET EDUCATION</span>
         </div>
-
-
         <div class="topic reveal">
-
-            <div class="topic-icon">
-                📈
-            </div>
-
-            <strong>
-                BANK NIFTY
-            </strong>
-
-            <span>
-                MARKET CONTEXT
-            </span>
-
+            <div class="topic-icon">📈</div>
+            <strong>BANK NIFTY</strong>
+            <span>MARKET CONTEXT</span>
         </div>
-
-
         <div class="topic reveal">
-
-            <div class="topic-icon">
-                💹
-            </div>
-
-            <strong>
-                STOCK MARKET
-            </strong>
-
-            <span>
-                LEARNING
-            </span>
-
+            <div class="topic-icon">💹</div>
+            <strong>STOCK MARKET</strong>
+            <span>LEARNING</span>
         </div>
-
-
         <div class="topic reveal">
-
-            <div class="topic-icon">
-                🔎
-            </div>
-
-            <strong>
-                TECHNICAL ANALYSIS
-            </strong>
-
-            <span>
-                CHART STUDY
-            </span>
-
+            <div class="topic-icon">🔎</div>
+            <strong>TECHNICAL ANALYSIS</strong>
+            <span>CHART STUDY</span>
         </div>
-
-
         <div class="topic reveal">
-
-            <div class="topic-icon">
-                〽
-            </div>
-
-            <strong>
-                PRICE ACTION
-            </strong>
-
-            <span>
-                MARKET BEHAVIOUR
-            </span>
-
+            <div class="topic-icon">〽</div>
+            <strong>PRICE ACTION</strong>
+            <span>MARKET BEHAVIOUR</span>
         </div>
-
-
         <div class="topic reveal">
-
-            <div class="topic-icon">
-                🧠
-            </div>
-
-            <strong>
-                PSYCHOLOGY
-            </strong>
-
-            <span>
-                TRADER MINDSET
-            </span>
-
+            <div class="topic-icon">🧠</div>
+            <strong>PSYCHOLOGY</strong>
+            <span>TRADER MINDSET</span>
         </div>
-
-
         <div class="topic reveal">
-
-            <div class="topic-icon">
-                🛡
-            </div>
-
-            <strong>
-                RISK MANAGEMENT
-            </strong>
-
-            <span>
-                RESPONSIBLE LEARNING
-            </span>
-
+            <div class="topic-icon">🛡</div>
+            <strong>RISK MANAGEMENT</strong>
+            <span>RESPONSIBLE LEARNING</span>
         </div>
-
-
         <div class="topic reveal">
-
-            <div class="topic-icon">
-                📚
-            </div>
-
-            <strong>
-                MARKET BASICS
-            </strong>
-
-            <span>
-                EDUCATIONAL CONTENT
-            </span>
-
+            <div class="topic-icon">📚</div>
+            <strong>MARKET BASICS</strong>
+            <span>EDUCATIONAL CONTENT</span>
         </div>
-
-
     </div>
-
 </div>
-
 </section>
-
-
-<!-- =========================================================
-     FINAL CTA
-========================================================= -->
 
 <section class="cta-section">
-
 <div class="container">
-
     <div class="cta-box">
-
         <div class="cta-content">
-
-            <div class="eyebrow">
-                JOIN THE COMMUNITY
-            </div>
-
-            <h2>
-                Your market
-                learning journey starts here.
-            </h2>
-
-            <p>
-                Explore educational market content,
-                understand charts and stay connected
-                with the community.
-            </p>
-
-
-            <a
-                href="https://t.me/+Fbph80QVeb5lZDA1"
-                target="_blank"
-                class="primary-btn"
-                style="display:inline-flex;"
-            >
-
+            <div class="eyebrow">JOIN THE COMMUNITY</div>
+            <h2>Your market learning journey starts here.</h2>
+            <p>Explore educational market content, understand charts and stay connected with the community.</p>
+            <a href="https://t.me/+Fbph80QVeb5lZDA1" target="_blank" class="primary-btn" style="display:inline-flex; width:auto; padding: 16px 30px;">
                 ✈ JOIN TELEGRAM COMMUNITY
-
             </a>
-
         </div>
-
     </div>
-
 </div>
-
 </section>
 
-
-<!-- =========================================================
-     DISCLAIMER
-========================================================= -->
-
 <div class="container">
-
 <div class="disclaimer">
-
-    <strong>
-        Educational Disclaimer:
-    </strong>
-
-    The content provided on this website is for
-    educational and informational purposes only.
-    Nothing on this page should be considered
-    financial, investment or trading advice.
-    Financial markets involve risk. Always conduct
-    your own research and make responsible decisions.
-
+    <strong>Educational Disclaimer:</strong> The content provided on this website is for educational and informational purposes only. Nothing on this page should be considered financial, investment or trading advice. Financial markets involve risk. Always conduct your own research and make responsible decisions.
 </div>
-
 </div>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 
 <footer>
-
-    © 2026
-
-    <strong>
-        Gokul Expert
-    </strong>
-
-    • Market Learning Community
-
+    © 2026 <strong>Gokul Expert</strong> • Market Learning Community
 </footer>
 
-
-<!-- =========================================================
-     FLOATING TELEGRAM
-========================================================= -->
-
-<a
-    href="https://t.me/+Fbph80QVeb5lZDA1"
-    target="_blank"
-    class="float-telegram"
-    aria-label="Join Telegram"
->
-
+<a href="https://t.me/+Fbph80QVeb5lZDA1" target="_blank" class="float-telegram" aria-label="Join Telegram">
     ✈
-
 </a>
 
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
 <script>
-
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-const revealElements =
-document.querySelectorAll(".reveal");
-
-
-const revealObserver =
-new IntersectionObserver(
-
-    function(entries){
-
-        entries.forEach(function(entry){
-
-            if(entry.isIntersecting){
-
-                entry.target.classList.add("active");
-
-                revealObserver.unobserve(
-                    entry.target
-                );
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold:.12
-    }
-
-);
-
+const revealElements = document.querySelectorAll(".reveal");
+const revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting){
+            entry.target.classList.add("active");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold:.12 });
 
 revealElements.forEach(function(element){
-
     revealObserver.observe(element);
-
 });
 
+const glow = document.querySelector(".hero-glow");
+const logoWrap = document.querySelector(".hero-logo-wrap");
 
-/* =========================================================
-   MOUSE PARALLAX HERO
-========================================================= */
-
-const glow =
-document.querySelector(".hero-glow");
-
-
-const logoWrap =
-document.querySelector(".hero-logo-wrap");
-
-
-document.addEventListener(
-    "mousemove",
-    function(e){
-
-        if(window.innerWidth < 700){
-            return;
-        }
-
-        const x =
-            (e.clientX / window.innerWidth - .5);
-
-        const y =
-            (e.clientY / window.innerHeight - .5);
-
-
-        glow.style.transform =
-            `translate(${x * 30}px, ${y * 30}px)`;
-
-
-        logoWrap.style.transform =
-            `translate(${x * 8}px, ${y * 8}px)`;
-
-    }
-);
-
-
-/* =========================================================
-   BUTTON EFFECT
-========================================================= */
-
-document
-.querySelectorAll(
-    ".primary-btn,.secondary-btn,.nav-btn"
-)
-.forEach(function(button){
-
-    button.addEventListener(
-        "click",
-        function(){
-
-            this.style.transform =
-                "scale(.97)";
-
-
-            setTimeout(
-                () => {
-
-                    this.style.transform = "";
-
-                },
-                140
-            );
-
-        }
-    );
-
+document.addEventListener("mousemove", function(e){
+    if(window.innerWidth < 768){ return; }
+    const x = (e.clientX / window.innerWidth - .5);
+    const y = (e.clientY / window.innerHeight - .5);
+    if(glow) glow.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+    if(logoWrap) logoWrap.style.transform = `translate(${x * 8}px, ${y * 8}px)`;
 });
-
-
-/* =========================================================
-   DYNAMIC PAGE TITLE
-========================================================= */
 
 let titles = [
-
     "Gokul Chhabra | Market Learning",
-
     "NIFTY • BANK NIFTY • Education",
-
     "Learn. Analyze. Grow."
-
 ];
-
-
 let titleIndex = 0;
-
-
 setInterval(function(){
-
     titleIndex++;
-
-
-    if(titleIndex >= titles.length){
-
-        titleIndex = 0;
-
-    }
-
-
-    document.title =
-        titles[titleIndex];
-
-
-},4000);
-
-
+    if(titleIndex >= titles.length){ titleIndex = 0; }
+    document.title = titles[titleIndex];
+}, 4000);
 </script>
-
 
 </body>
 </html>
